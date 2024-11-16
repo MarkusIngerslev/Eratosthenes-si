@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+#visualization {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
+.number {
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.unmarked {
+  background-color: #fff;
+}
+
+.marked {
+  background-color: #f8d7da;
+}
+
+.current-prime {
+  background-color: #d4edda;
+  border: 2px solid #28a745;
+}
+
+.prime {
+  background-color: #c3e6cb;
+}

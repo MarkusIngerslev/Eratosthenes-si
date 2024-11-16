@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Eratosthenes' Si Visualisering</title>
 
-    <link rel="icon" href="#" />
+    <!-- links -->
     <link rel="stylesheet" href="./css/style.css" />
-
-    <title>Eratosthenes si</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
   </head>
   <body>
+    <header>
+      <h1>Eratosthenes' Si Visualisering</h1>
+    </header>
     <main>
-      <h1>Eratosthenes Si (find prim tal)</h1>
-      <div class="field">
-        <p>Ting her</p>
+      <!-- Kontrolpanel -->
+      <div class="controls">
+        <label for="limit">Indtast maksimumværdi (n): </label>
+        <input type="number" id="limit" value="50" min="2" max="500" />
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+
+        <!-- Tilføj efter pause-knappen -->
+        <label for="speed">Hastighed (ms): </label>
+        <input type="number" id="speed" value="500" min="100" step="100" />
       </div>
+
+      <!-- Container til visualiseringen -->
+      <div id="visualization"></div>
     </main>
 
-    <script type="module" src="./js/controller.js"></script>
+    <!-- Script tags -->
+    <script src="./js/controller.js" type="module"></script>
   </body>
 </html>
