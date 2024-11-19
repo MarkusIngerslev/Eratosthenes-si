@@ -3,14 +3,21 @@ body {
   margin: 20px;
 }
 
+.title {
+  text-align: center;
+}
+
 .controls {
+  max-width: 700px;
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 
 #visualization {
   display: flex;
   flex-wrap: wrap;
-  max-width: 600px;
+  max-width: 1350px;
+  margin: 0 auto;
 }
 
 .number {
