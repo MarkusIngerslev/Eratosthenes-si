@@ -21,10 +21,13 @@
         <input type="number" id="limit" value="50" min="2" max="500" />
         <button id="startBtn">Start</button>
         <button id="pauseBtn">Pause</button>
-
-        <!-- Tilføj efter pause-knappen -->
         <label for="speed">Hastighed (ms): </label>
-        <input type="number" id="speed" value="500" min="100" step="100" />
+        <input type="number" id="speed" value="500" min="50" step="50" />
+      </div>
+
+      <!-- Område til animation og forklaring -->
+      <div id="animationArea">
+        <p id="currentAction"></p>
       </div>
 
       <!-- Container til visualiseringen -->
