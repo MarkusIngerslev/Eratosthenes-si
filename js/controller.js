@@ -48,7 +48,7 @@ function startAlgorithm() {
 
   // Hent hastighedsværdien
   let speed = parseInt(speedInput.value);
-  if (isNaN(speed) || speed < 100) {
+  if (isNaN(speed) || speed < 50) {
     speed = 500; // Standardværdi
   }
 
@@ -66,8 +66,11 @@ function pauseAlgorithm() {
 function runAlgorithm() {
   if (isPaused) return;
 
-  model.step();
+  const stepResult = model.step(); // Få besked om det aktuelle trin
   view.render(model.getNumbers(), model.currentPrime);
+
+  // Opdater animationsområdet
+  view.updateAnimation(stepResult);
 
   if (model.isCompleted) {
     clearInterval(intervalId);

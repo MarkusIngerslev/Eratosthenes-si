@@ -1,6 +1,7 @@
 export class SieveView {
   constructor() {
     this.container = document.getElementById("visualization");
+    this.currentActionElement = document.getElementById("currentAction");
   }
 
   render(numbers, currentPrime) {
@@ -14,10 +15,11 @@ export class SieveView {
 
       numberDiv.textContent = num.value;
 
-      if (num.isMarked) {
-        numberDiv.classList.add("marked");
-      } else if (num.isPrime) {
+      // Ændret rækkefølgen af betingelserne
+      if (num.isPrime) {
         numberDiv.classList.add("prime");
+      } else if (num.isMarked) {
+        numberDiv.classList.add("marked");
       } else {
         numberDiv.classList.add("unmarked");
       }
@@ -28,5 +30,9 @@ export class SieveView {
 
       this.container.appendChild(numberDiv);
     });
+  }
+
+  updateAnimation(action) {
+    this.currentActionElement.textContent = action;
   }
 }
